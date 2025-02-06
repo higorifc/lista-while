@@ -8,11 +8,11 @@
     //ENTRADA
     let usuario = prompt('Informe o nome de usuário:');
     let senha = prompt('Informe sua senha:');
-    while (usuario == senha) {
-        alert(`Informe a senha e o usuario diferentes!`);
-        prompt('Informe o nome de usuário:');
-        prompt('Informe sua senha:');
-    }
+    while (usuario === senha) {
+        alert("Informe a senha e o usuario diferentes!");
+        usuario = prompt('Informe o nome de usuário:');
+        senha = prompt('Informe sua senha:');
+    };
 
     //PROCESSAMENTO
 

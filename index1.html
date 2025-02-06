@@ -6,14 +6,15 @@
     */
 
     //ENTRADA
-    let nota = Number(prompt('Informe uma nota de 0 a 10:'));
-    while (0 >= nota || 10 <= nota) {
-        Number(prompt(`Informe uma nota de 0 a 10:`));
-    } ;
+    let nota = 0;
+    nota = Number(prompt(`Informe uma nota de 0 a 10:`));
 
 
     //PROCESSAMENTO
-
+    while (nota < 0 || nota > 10) {
+        alert("Número inválido");
+        nota = Number(prompt(`Informe uma nota de 0 a 10:`));
+    };
 
     //SAÍDA
 
