@@ -5,6 +5,22 @@
     */
 
     //ENTRADA
+    
+    let numero = Math.floor(Math.random() * 30) + 1; 
+    let tentativa = 0;
+
+    while (tentativa !== numero) {
+         tentativa = parseInt(prompt("Adivinhe o número entre 1 e 30:"), 10);
+    
+        if (tentativa < numero) {
+            alert("O número é maior. Tente novamente.");
+        } else if (tentativa > numero) {
+         alert("O número é menor. Tente novamente.");
+        } else {
+           alert("Parabéns! Você acertou o número.");
+     }
+    }
+
 
 
     //PROCESSAMENTO

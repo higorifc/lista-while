@@ -8,7 +8,16 @@
     */
 
     //ENTRADA
+    let numero = prompt("Digite um número para inverter:");
+    let numeroInvertido = "";
+    let corredor = 0;
 
+    while (corredor < numero.length) {
+        numeroInvertido = numero[corredor] + numeroInvertido;
+        corredor = corredor + 1;
+    }
+
+    alert(`Número invertido: ${numeroInvertido}`);
 
     //PROCESSAMENTO
 

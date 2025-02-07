@@ -6,7 +6,17 @@
     */
 
     //ENTRADA
-     
+    let populacaoA = 80000;
+    let populacaoB = 200000;
+    let corredor = 0;
+
+    while (populacaoA <= populacaoB) {
+        populacaoA += populacaoA * 0.03;
+        populacaoB += populacaoB * 0.015;
+        corredor++;
+    }
+
+    alert(`A população do país A passará a população do país B em ${corredor} anos`);
 
     //PROCESSAMENTO
 

@@ -13,7 +13,47 @@
     */
 
     //ENTRADA
+    let idade = [];
+    let sexo = [];
+    let salario = [];
+    let mediaDeSalario = 0;
 
+    do {
+        idade.push(Number(prompt(`Sua idade:`)));
+        if (idade[idade.length - 1] > 0) {
+            sexo.push(prompt(`Qual o seu sexo? M/F`).toUpperCase().trim());
+            salario.push(Number(prompt(`Seu salario:`)));
+
+            mediaDeSalario = mediaDeSalario + salario[salario.length - 1];
+        }
+    } while(idade[idade.length - 1] > 0);
+    idade.pop();
+
+    mediaDeSalario = mediaDeSalario / salario.length;
+
+    let maiorIdade = Math.max(...idade);
+    let menorIdade = Math.min(...idade);
+
+    let mulheres = 0;
+        for (let mulher of sexo) {
+        if (mulher == "F") {
+            mulheres ++;
+        }
+    }
+
+    let menorSalario = salario.indexOf(Math.min(...salario));
+    let menorSexo = "uma mulher";
+    if (sexo[menorSalario] == "M") {
+        menorSexo = "um homem";
+    }
+
+    document.write(`</br> Resultados da pesquisa: </br>
+    a) Média dos salários: R$${mediaDeSalario.toFixed(2).replace("." , ",")} </br>
+    b) Mais velho: ${maiorIdade} </br>
+       Mais novo: ${menorIdade} </br>
+    c) Quantidade de mulheres: ${mulheres} </br>
+    d) O menor salário da região é ${salario[menorSalario]} sendo de ${menorSexo} com ${idade[menorSalario]} anos.
+    `);
 
     //PROCESSAMENTO
 
